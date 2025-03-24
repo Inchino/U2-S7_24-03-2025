@@ -9,7 +9,7 @@ namespace U2_S7_Lezioni.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         { }
 
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Student> Students { get; set; }
 
     }
 }

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using U2_S7_Lezioni.Data;
+using U2_S7_Lezioni.Servicies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<StudentService>();
 
 var app = builder.Build();
 
