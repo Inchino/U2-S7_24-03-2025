@@ -12,7 +12,7 @@ using U2_S7_Lezioni.Data;
 namespace U2_S7_Lezioni.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250324150124_Initial")]
+    [Migration("20250324154535_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -25,37 +25,29 @@ namespace U2_S7_Lezioni.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("U2_S7_Lezioni.Models.Product", b =>
+            modelBuilder.Entity("U2_S7_Lezioni.Models.Student", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("Deleted")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
-
-                    b.Property<string>("Name")
+                    b.Property<string>("Cognome")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("Updated")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products");
+                    b.ToTable("Students");
                 });
 #pragma warning restore 612, 618
         }
