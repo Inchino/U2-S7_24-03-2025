@@ -1,0 +1,6 @@
+@U2_S7_Lezioni_HostAddress = http://localhost:5188
+
+GET {{U2_S7_Lezioni_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
