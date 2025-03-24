@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("U2-S7-Lezioni")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90b82cd28e4f879a7c9faf1085a64401ac9101b7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad34694faf2bce9451d2d3293269708f2b88ab69")]
 [assembly: System.Reflection.AssemblyProductAttribute("U2-S7-Lezioni")]
 [assembly: System.Reflection.AssemblyTitleAttribute("U2-S7-Lezioni")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
