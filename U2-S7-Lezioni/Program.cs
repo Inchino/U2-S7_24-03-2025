@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using U2_S7_Lezioni.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
