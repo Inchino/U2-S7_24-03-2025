@@ -1,6 +1,7 @@
 ﻿using U2_S7_Lezioni.Data;
 using U2_S7_Lezioni.Models;
 using Microsoft.EntityFrameworkCore;
+using U2_S7_Lezioni.DTOs;
 
 namespace U2_S7_Lezioni.Servicies
 {
@@ -24,5 +25,34 @@ namespace U2_S7_Lezioni.Servicies
             await _context.SaveChangesAsync();
             return student;
         }
+
+        public async Task<Student> GetByIdAsync(Guid id)
+        {
+            return await _context.Students.FindAsync(id);
+        }
+
+        public async Task<Student?> UpdateAsync(Guid id, StudentUpdateDTO dto)
+        {
+            var student = await _context.Students.FindAsync(id);
+            if (student == null) return null;
+
+            student.Nome = dto.Nome;
+            student.Cognome = dto.Cognome;
+            student.Email = dto.Email;
+
+            await _context.SaveChangesAsync();
+            return student;
+        }
+
+        public async Task<bool> DeleteAsync(Guid id)
+        {
+            var student = await _context.Students.FindAsync(id);
+            if (student == null) return false;
+
+            _context.Students.Remove(student);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
     }
 }
